@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lição 2</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+        pre{
+            text-align: left; 
+        margin-left: 0; 
+        }
+        code {
+            font-family: "Courier New", Courier, monospace;
+            color: white;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+    <h1>Criação de Listas, Tabelas e Formulários</h1>
+    <h2>	Criação de listas</h2>
+    <P>No HTML, as listas são usadas para organizar e apresentar informações de forma clara e estruturada. Existem três tipos principais de listas em HTML: listas não ordenadas, listas ordenadas e listas de definição. Vamos falar sobre cada uma delas.</P>
+<h3>1.	Listas não ordenadas</h3>
+<p>A lista não ordenada é usada quando os itens da lista não <b>precisam ser classificados de maneira numerada.</b> A tag <-ul-> define o início e o fim da lista não ordenada.</p>
+<p>Dentro de <-ul->, usamos a tag <-li-> para representar cada item da lista. Por exemplo:</p>
+<pre>
+    <code>
+&lt;ul&gt;
+&lt;li>Maçã &lt;/li&gt;
+&lt;li>Banana &lt;/li&gt;
+&lt;li>Uva &lt;/li&gt;
+&lt;/ul&gt;
+    </code>
+</pre>
+
+<p><b>Resultado no navegador:</b></p>
+<ul> 
+    <li>Maçã</li> 
+    <li>Banana</li> 
+    <li>Uva</li>
+     </ul>
+<hr>
+<h3>2.	Listas ordenadas</h3>
+<p>A lista ordenada é usada quando a <B>ordem dos itens importa,</B> como em etapas de um processo ou uma classificação. Por padrão, os itens em uma lista ordenada são <B>numerados.</B> A tag <-ol-> define o <B>início e o fim da lista ordenada.</B>  Dentro de <-ol->, usamos a tag <-li-> para representar cada item da lista. Por exemplo:</P>
+<pre>
+    <code>
+&lt;ol&gt;
+&lt;li&gt;Primeiro passo&lt;/li&gt;
+&lt;li>Segundo passo&lt;/li&gt;
+&lt;li>Terceiro passo&lt;/li&gt;
+&lt;/ol&gt;  
+    </code>
+</pre>
+<p><b>Resultado no navegador: </b></p>
+<ol> 
+    <li>Primeiro passo</li> 
+    <li>Segundo passo</li> 
+    <li>Terceiro passo</li> 
+    </ol>
+<P>Se você preferir letras maiúsculas ou minúsculas, ou números romanos… para a numeração, use o atributo <b>type=:</b></P> 
+<pre>
+    <code> 
+&lt;ol type="A"&gt;
+&lt;li&gt;Primeiro passo&lt;/li&gt;
+&lt;li&gt;Segundo passo&lt;/li&gt;
+&lt;li&gt;Terceiro passo&lt;/li&gt;
+&lt;/ol&gt;       
+    </code>
+</pre>
+<p><b>Resultado no navegador:</b></p>
+<ol type="A">
+    <li>Primeiro passo</li>
+    <li>Segundo passo</li>
+    <li>Terceiro passo</li>
+  </ol>
+<hr>
+<H3>3.	Listas de definição</H3>
+<p>A lista de definição é usada quando você precisa apresentar uma lista de termos e suas definições, como um glossário ou dicionário.</p>
+<p>A tag <B><-dl-></B> define o início e o fim da lista de definição.</p>
+<p>A tag <B><-dt-></B> é usada para definir o termo.</p>
+<p>A tag <B><-dd-></B> é usada para definir a descrição ou definição do termo.</p>
+<p>Por exemplo:</p> 
+<pre>
+    <code>
+&lt;dl&gt;
+&lt;dt&gt;HTML&lt;/dt&gt;
+&lt;dd&gt;HyperText Markup Language.&lt;/dd&gt;
+&lt;dt&gt;CSS&lt;/dt&gt;
+&lt;dd&gt;Cascading Style Sheets.&lt;/dd&gt;
+&lt;/dl&gt;
+    </code>
+</pre>
+<P><B>Resultado no navegador:</B></P>
+<dl>
+    <dt>HTML</dt>
+    <dd>HyperText Markup Language.</dd>
+    <dt>CSS</dt>
+    <dd>Cascading Style Sheets.</dd>
+  </dl>
+
+<P><B>N.B.:</B> O atributo type não se aplica nas listas de definição.</P> 
+<BR>
+<h2>	Criação de tabelas</h2>
+<P>A criação de tabelas em HTML permite organizar dados de forma estruturada em <B>linhas e colunas.</B>A estrutura de uma tabela é composta principalmente pelas seguintes tags:</P>
+<P><B><-table-></B>: Define o início e o fim da tabela.</P>
+<P><B><-tr-> (Table Row)</B>: Define uma linha da tabela.</P>
+<P><B><-th-> (Table Header)</B>: Define uma célula de cabeçalho, geralmente usada para títulos de coluna.</P>
+<P><B><-td-> (Table Data)</B>: Define uma célula de dados na tabela.</P>
+<P>Por exemplo: </P>
+<pre>
+    <code>
+&lt;table border="1"&gt;
+&lt;tr&gt;
+&lt;th>Nome&lt;/th&gt;
+&lt;th>Idade&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td>Ana&lt;/td&gt;
+&lt;td>25&lt;/&gt;
+&lt;/tr&gt;
+&lt;tr>
+&lt;td>João&lt;/td&gt;
+&lt;td>30&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+    </code>
+</pre>
+<p></p>Resultdo no navegador:</p>
+<table border="1">
+    <tr>
+    <th>Nome</th>
+    <th>Idade</th>
+    </tr>
+    <tr> 
+   <td>Ana</td>
+    <td>25</td>
+   </tr>
+    <tr>
+    <td>João</td> 
+   <td>30</td>
+    </tr>
+    </table>
+   
+<p>No exemplo acima, usamos o atributo <b>border="1"</b> na tag <b><-table-></b>, o que adiciona uma <b>borda à tabela. </b></p>
+<p>Em vez de usar o atributo <b>border="1"</b>, você pode usar <b>CSS</b> para personalizar a aparência das tabelas. Mas esse é um assunto que abordaremos no próximo módulo.</p>
+<p>Se não for especificada uma moldura para a tabela, ela irá aparecer sem limites, como mostra acima. Para que a tabela tenha limites, use o atributo <b>bolder-collapse</b> na folha de estilo (CSS) para unir os limites. Ficaria assim:</p>
+CSS
+<P>Table, th, td {</P>
+<P>Border: 1 ph:</P>
+<P>Border-collapse: collapse;</P>
+<P>}</P>
+<P>Outro <B>Elemento útil</B> em Tabela é o <B><-caption-></B>. Que é usado para <B>adicionar um título à tabela,</B> que fica acima dela.</P> 
+<P>Por exemplo: </P>
+<pre>
+<code>
+&lt;table border="1"&gt;
+&lt;caption&lt;Informações do individuo&lt;/caption&gt;
+&lt;tr&gt;
+&lt;th>Nome&lt;/th&gt;
+&lt;th>Idade&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td>Ana&lt;/td&gt;
+&lt;td>25&lt;/&gt;
+&lt;/tr&gt;
+&lt;tr>
+&lt;td>João&lt;/td&gt;
+&lt;td>30&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;  
+</code>
+</pre>
+<p><b>Resultado no navegador:</b></p>
+<table border="1">
+    <caption>Informações do individuo</caption>
+        <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+            </tr>
+            <tr> 
+           <td>Ana</td>
+            <td>25</td>
+           </tr>
+            <tr>
+            <td>João</td> 
+           <td>30</td>
+            </tr>
+            </table>
+<H3>Atributo colspan e rowspan</H3>
+<P>>Os atributos <B>colspan e rowspan</B> são usados em tabelas HTML para <B>mesclar células</B>. Eles permitem que você crie células que se estendem por mais de uma coluna (colspan) ou mais de uma linha (rowspan).</P>
+<hr>
+<h3>Atributo colspan</h3>
+O atributo colspan permite que uma célula de uma tabela ocupe <b>várias colunas.</b>
+<p>Exemplo de colspan:</p>
+<p>Vamos supor que temos uma tabela com 3 colunas, mas queremos que a primeira linha ocupe toda a largura da tabela (3 colunas). Veja o exemplo:</p>
+HTML
+<pre>
+<code>
+&lt;table border="1"&gt;
+&lt;tr&gt;
+&lt;td colspan="3">Cabeçalho que ocupa 3 colunas&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td>Celula 1&lt;/td&gt;
+&lt;td>Celula 2&lt;/td&gt;
+&lt;td>Celula 3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;   
+    </code>
+</pre>
+<P><B>Resultado no navegador:</B></P>
+<table border="1">
+    <tr>
+        <td colspan="3">Cabeçalho que ocupa 3 colunas</td>
+    </tr>
+    <tr>
+        <td>Celula 1</td>
+        <td>Celula 2</td>
+        <td>Celula 3</td>
+    </tr>
+</table>
+<hr>
+<h3>Atributo rowspan</h3>
+<p>O atributo rowspan permite que uma célula de uma tabela ocupe <b>várias linhas</b>. Veja o exemplo: </p>
+HTML
+<pre>
+    <code>
+&lt;table border="1"&gt;
+&lt;tr&gt;
+&lt;td rowspan="2"&gt;Celula que ocupa 2 linhas&lt;/td&gt;
+&lt;td>Celula 1&lt;/td&gt;
+&lt;td>Celula 2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td>Celula 3&lt;/td&gt;
+&lt;td>Celula 4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+</code>
+</pre>
+<P><B>Resultado no navegador:</B></P>
+<table border="1">
+    <tr>
+        <td rowspan="2">Celula que ocupa 2 linhas</td>
+        <td>Celula 1</td>
+        <td>Celula 2</td>
+    </tr>
+    <tr>
+        <td>Celula 3</td>
+        <td>Celula 4</td>
+    </tr>
+</table>
+<HR>
+<H3>Atributo colspan e rowspan juntos</H3>
+<P>Veja o exemplo:</P>
+<pre>
+    <code>
+&lt;table border="1"&gt;
+&lt;tr&gt;
+&lt;td rowspan="2"&gt;Celula A (2 linhas)&lt;/td&gt;
+&lt;td colspan="2"&gt;Celula B (2 colunas)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Celula C&lt;/td&gt;
+&lt;td&gt;Celula D&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Celula E&lt;/td&gt;
+&lt;td&gt;Celula F&lt;/td&gt;
+&lt;td&gt;Celula G&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt; 
+    </code>
+</pre>
+<P><B>Resultado no nagevador:</B></P>
+<table border="1">
+    <tr>
+        <td rowspan="2">Celula A (2 linhas)</td>
+        <td colspan="2">Celula B (2 colunas)</td>
+    </tr>
+    <tr>
+        <td>Celula C</td>
+        <td>Celula D</td>
+    </tr>
+    <tr>
+        <td>Celula E</td>
+        <td>Celula F</td>
+        <td>Celula G</td>
+    </tr>
+</table>
+<br>
+<h2>	Criação de formulários</h2>
+<p>A criação de formulários em HTML é uma das partes fundamentais para a interação com os usuários em uma página web. Formulários são usados para <b>coletar dados de usuários</b>, como nome, e-mail, senhas, comentários, etc.</p>
+<p>Eis abaixo, a <b>estrutura básica de um formulário:</b></p>
+<pre>
+    <code>
+&lt;form action="processar.php" method="POST"&gt;
+
+&lt;label for="nome"&gt;Nome:&lt;/label&gt;
+&lt;input type="text" id="nome" name="nome"&gt;
+
+&lt;label for="email">E-mail:&lt;/label&gt;
+&lt;input type="email" id="email" name="email"&gt;
+
+&lt;label for="mensagem"&gt;Mensagem:&lt;/label&gt;
+&lt;textarea id="mensagem" name="mensagem"&gt;&lt;/textarea&gt;
+
+&lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;       
+    </code>
+</pre>
+<p><b>Resultado no navegador:</b></p>
+
+<form action="processar.php" method="POST">
+
+  <label for="nome">Nome:</label>
+   <input type="text" id="nome" name="nome">
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email">
+   
+    <label for="mensagem">Mensagem:</label> 
+   <textarea id="mensagem" name="mensagem"></textarea>
+   
+    <button type="submit">Enviar</button> 
+   </form>
+
+<H3>Explicação dos elementos do formulário:</H3>
+<P><B>	<-form->:</B>Esta tag contém todo o formulário. O atributo action define para qual URL os dados do formulário serão enviados, e o atributo method define como esses dados serão enviados:</P> 
+<P><B>1. method="GET":</B>Envia os dados pela URL, tornando-os visíveis na barra de endereços.</P> 
+<P><B>2. method="POST":</B> Envia os dados de forma oculta no corpo da requisição, sendo mais seguro para dados confidenciais.</P>
+<P><B>	<-label->:</B> Serve para criar rótulos para os campos do formulário. O atributo <b>for</b> faz a associação do rótulo com o campo de entrada correspondente. Isso melhora a acessibilidade e permite que o usuário clique no rótulo para focar no campo de entrada.</P>
+<p><b>	<-input->:</b> Usado para criar campos de entrada de texto. O atributo <b>type</b> define o tipo de campo (por exemplo, texto, número, senha, e-mail):</p>
+<p><b>1.	type="text": </b>Campo de texto simples.</p> 
+<p><b>2.	type="email": </b>Campo específico para e-mails, com validação automática de formato.</p> 
+<p><b>3.	type="password": </b>Campo de senha, que oculta o texto digitado.</p> 
+<p><b>4.	type="number": </b>Campo para números.</p> 
+<p><b>	<-textarea->: </b>Usada para campos de texto de várias linhas, como caixas de mensagem ou comentários. O conteúdo é escrito por meio de várias linhas.</p>
+<p><b>	<-button->:</b>Cria um botão que envia o formulário. O tipo "submit" indica que o botão é usado para enviar o formulário.</p> 
+<hr>
+<p><b>Dê-nos a sua opinião sobre esta lição:</p></b>
+<form action="processar_feedback.php" method="post">
+    <p><label for="nome">Nome ou e-mail (Opcional):</label>
+    <input type="text" id="nome" name="nome" placeholder="Seu nome"></p>
+
+    <p><label for="dificuldade">Dificuldade da Lição:</label>
+<select id="dificuldade" name="dificuldade">
+<option value="muito_facil">Muito fácil</option>
+<option value="facil">Fácil</option>
+<option value="media">Média</option>
+<option value="dificil">Difícil</option>
+<option value="muito_dificil">Muito difícil</option>
+</select></p>
+
+<p><label for="melhoria">O que poderia ser melhorado?</label>
+<textarea id="melhoria" name="melhoria" rows="4" placeholder="Escreva aqui..."></textarea></p>
+
+<p><label for="comentarios">Sugestões e Comentários Adicionais:</label>
+<textarea id="comentarios" name="comentarios" rows="4" placeholder="Escreva aqui..."></textarea></p>
+
+<p><button type="submit">Enviar Feedback</button></p>
+</form>
+<a href="Módulo 1.html" class="circle">Voltar</a>
+</div>
+</body>
+    
+    
+
+
+
+

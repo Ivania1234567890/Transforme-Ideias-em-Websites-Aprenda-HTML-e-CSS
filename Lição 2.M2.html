@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lição 2</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            pre{
+                text-align: left; 
+            margin-left: 0; 
+            }
+            code {
+                font-family: "Courier New", Courier, monospace;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+    <h1>CSS Interno, Externo e Em Linha</h1>
+    <p>Agora, vamos aprender sobre as três formas principais de <b>aplicar CSS em uma página web</b>: <b>CSS Interno, CSS Externo e CSS em Linha</b>. Cada um desses métodos tem suas características e é mais adequado para situações específicas. Então, vamos detalhar cada um deles.</p>
+    <h2>I.	O que é CSS Interno?</h2>
+    <p> O CSS Interno é quando você coloca as <b>regras de estilo dentro da própria página HTML</b>, dentro da tag <-style->, que fica normalmente no <b>head</b> da página. Ou seja, o CSS fica "embutido" no próprio código <b>HTML.</b></p>
+    <h3>Como usar?</h3>
+    <p>O CSS Interno é definido dentro da tag <b><-style-></b> que deve ser colocada dentro da seção <-head-> do HTML. Veja um exemplo:</p>
+    <pre>
+        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-br"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;Exemplo de CSS Interno&lt;/title&gt;
+&lt;style&gt;
+</code>
+</pre>
+        <p>body {</p>
+        <p>font-family: Arial;</p>
+        <p>background-color: #f0f0f0;</p>
+        <p>}</p>
+        <p>h1 {</p>
+        <p>color: blue;</p>
+        <p>text-align: center;</p>
+        <p>}</p>
+        <p>p {</p>
+        <p>color: white;</p>
+        <p>font-size: 16px;</p>
+       <p> }</p>
+<pre>
+<code>
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1>Bem-vindo ao CSS Interno!&lt;/h1&gt;
+&lt;p>Este é um exemplo de como usar CSS diretamente dentro do HTML.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </code>
+    </pre>
+    <H3>Quando usar o CSS Interno?</H3>
+<P>•	Quando você precisa de estilos específicos para uma única página e não quer criar um arquivo CSS separado para isso.</P>
+<P>•	Projetos pequenos ou quando você está fazendo um protótipo e quer testar rapidamente os estilos na própria página.</P>
+<P>•	Se os estilos não serão reutilizados em outras páginas, o CSS Interno é uma escolha viável.</P>
+<HR>
+<H2>II.	O que é CSS Externo?</H2>
+<P>O CSS Externo é quando você coloca as <B>regras de estilo em um arquivo CSS separado</B> e, em seguida, o linka a esse arquivo dentro do HTML. Ou seja, você cria um arquivo .css onde ficará todo o código de estilo, e o HTML se refere a esse arquivo para aplicar os estilos.</P>
+<H3>Como usar?</H3>
+<P>Você cria um arquivo separado com a extensão <B>.css</B> e depois faz um link para esse arquivo dentro da tag <-head-> do HTML usando a tag <B><-link-></B>. Veja um exemplo:</P> 
+<pre>
+<code>
+&lt;!DOCTYPE html>
+&lt;html lang="pt-br"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;Exemplo de CSS Externo&lt;/title&gt;
+&lt;link rel="stylesheet" href="styles.css"&gt; -( Link para o arquivo CSS)
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Bem-vindo ao CSS Externo!&lt;/h1&gt;
+&lt;p&gt;Este exemplo está usando um arquivo CSS separado para os estilos.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+<p>CSS (styles.css):</p>
+<p>body {</p>
+<p>font-family: Arial, sans-serif;</p>
+<p>background-color: #f0f0f0;</p>
+<p>}</p>
+<p>h1 {</p>
+<p>color: blue;</p>
+<p>text-align: center;</p>
+<p>}</p>
+<p>p {</p>
+<p>color: gray;</p>
+<p>font-size: 16px;</p>
+<p>}</p>
+<H3>Quando usar o CSS externo?</H3>
+<p>•	Para projetos maiores e quando você tem várias páginas, o CSS Externo é a melhor opção, pois o arquivo de estilos pode ser reutilizado em todas as páginas. Basta colocar o link em todas as páginas.</p>
+<p>•	Quando você precisa manter o HTML mais limpo e separado do CSS.</p>
+<p>•	Se você quer aplicar estilos consistentes em várias páginas de um site, o CSS Externo ajuda a centralizar os estilos em um único lugar.</p>
+<hr>
+<h2>III.	O que é CSS em Linha?</h2>
+<p>O CSS em Linha é quando você <b>aplica os estilos diretamente no próprio elemento HTML</b>, usando o atributo <b>style</b>. Esse estilo é aplicado apenas ao elemento específico em que ele está definido.</p>
+<h3>Como usar?</h3>
+<p>Você usa o atributo style dentro de uma tag HTML para definir o estilo diretamente naquele elemento. Veja um exemplo: </p>
+<pre>
+    <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-br"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title>Exemplo de CSS em Linha&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1 style="color: blue; text-align: center;">Bem-vindo ao CSS em Linha!&lt;/h1&gt;
+&lt;p style="color: gray; font-size: 16px;"&gt;Este é um exemplo de como aplicar estilos diretamente nos elementos HTML.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </code>
+</pre>
+<h3>Quando usar o CSS em Linha?</h3>
+<p>•	Para aplicar um estilo único em um único elemento que não será reutilizado.</p>
+<p>•	Quando você precisa fazer alterações rápidas ou testar algo pontual e não quer modificar o arquivo CSS inteiro.</p>
+<hr>
+<p><b>Dê-nos a sua opinião sobre esta lição:</p></b>
+<form action="processar_feedback.php" method="post">
+    <p><label for="nome">Nome ou e-mail (Opcional):</label>
+    <input type="text" id="nome" name="nome" placeholder="Seu nome"></p>
+
+    <p><label for="dificuldade">Dificuldade da Lição:</label>
+<select id="dificuldade" name="dificuldade">
+<option value="muito_facil">Muito fácil</option>
+<option value="facil">Fácil</option>
+<option value="media">Média</option>
+<option value="dificil">Difícil</option>
+<option value="muito_dificil">Muito difícil</option>
+</select></p>
+
+<p><label for="melhoria">O que poderia ser melhorado?</label>
+<textarea id="melhoria" name="melhoria" rows="4" placeholder="Escreva aqui..."></textarea></p>
+
+<p><label for="comentarios">Sugestões e Comentários Adicionais:</label>
+<textarea id="comentarios" name="comentarios" rows="4" placeholder="Escreva aqui..."></textarea></p>
+
+<p><button type="submit">Enviar Feedback</button></p>
+</form>
+<a href="Módulo 2.html" class="circle">Voltar</a>
+</div>
+</body>
+
+
+
+
+
+
+    
+
+        

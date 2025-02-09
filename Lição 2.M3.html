@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lição 2</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            pre{
+                text-align: left; 
+            margin-left: 0; 
+            }
+            code {
+                font-family: "Courier New", Courier, monospace;
+                color: white;
+            }
+            </style>
+    </head>
+    <body>
+        <div class="container">
+    <h1>Cores e Imagens</h1>
+    <p>As cores são um dos aspectos <b>mais importantes do design de uma página</b>. No CSS, podemos definir as cores de vários elementos, como o fundo (background), o texto, as bordas, entre outros.</p>
+    <h2>Definindo Cores no CSS</h2>
+    <p>Existem várias formas de especificar cores no CSS. Vou explicar as mais comuns:</p>
+    <h3>1. Cores por nome</h3>
+    <p>Você pode usar o nome de cores predefinidas no CSS, como red, blue, green, etc. Veja o exemplo.</p>
+    <p>body {</p>
+    <p>background-color: lightblue;  (Cor de fundo do body)</p>
+    <p>color: darkgreen;  (Cor do texto)</p>
+    <p>}</p>
+    <p>Existem mais de 140 nomes de cores predefinidos que você pode usar, como white, black, gray, yellow, aqua, etc.</p>
+    <hr>
+    <h3>2. Cores usando valores Hexadecimais (Hex)</h3>
+    <p>As cores também podem ser definidas usando valores hexadecimais. Um valor hexadecimal começa com # seguido por 6 caracteres (dígitos de 0-9 e letras de A-F) que representam a intensidade de vermelho (R), verde (G) e azul (B) na cor (isso é conhecido como modelo RGB).</p>
+    <p>Exemplo de cor hexadecimal:</p>
+    <p>h1 {</p>
+    <p>color: #ff6347; </p>
+    <p>}</p>
+    <p>No exemplo acima, <b>#ff6347</b> é um tom de vermelho (a intensidade de R, G e B é representada pelos dois primeiros, dois intermediários e os dois últimos dígitos).</p>
+    <hr>
+    <h3>3. Cores usando RGB</h3>
+    <P><B>RGB</B> é o modelo de cores em que as cores são representadas pela mistura de vermelho (Red), verde (Green) e azul (Blue). Veja o exemplo.</P>
+    <P>p {</P>
+    <p>color: rgb(255, 99, 71); </p>
+    <p>}</p>
+    <p>No modelo RGB, os valores de cada cor variam de 0 a 255, sendo 0 a ausência de cor e 255 a intensidade máxima.</p>
+    <HR>   
+    <H3>4. Cores usando HSL</H3>
+    <P><B>HSL (Hue, Saturation, Lightness) </B>é outro modelo de cores. Em HSL, você define a cor em três parâmetros:</P>
+    <p><b>•	Hue (matiz): </b>Representa a cor em um círculo de 360° (0° = vermelho, 120° = verde, 240° = azul, etc.).</p>
+    <p><b>•	Saturation (saturação):</b> Representa a intensidade da cor (0% = sem cor, 100% = cor total).</p>
+    <p><b>•	Lightness (luminosidade):</b> Representa a quantidade de luz na cor (0% = preto, 100% = branco).</p>
+    <p>footer {</p>
+    <p>background-color: hsl(120, 60%, 40%);   (Cor verde com 60% de saturação e 40% de luminosidade)</p>
+    <p>}</p>
+    <br>
+    <h2>Gradientes no CSS: Focando no Linear Gradient</h2>
+<p>Um gradiente é uma <b>transição gradual entre duas ou mais cores.</b> Em CSS, você pode usar gradientes para criar efeitos de cor muito interessantes, como fundos, botões e até textos.</p>
+<h3>O que é um Linear Gradient?</h3>
+<p>Um linear gradient é um tipo de gradiente onde as cores se <b>mesclam ao longo de uma linha reta.</b> Ou seja, as cores mudam de forma linear, geralmente de um ponto inicial até um ponto final (que pode ser configurado com diferentes ângulos ou direções).</p>
+<br>
+<h3>Sintaxe Básica do Linear Gradient</h3>
+<P>A propriedade para criar um linear gradient no CSS é <b>background: linear-gradient</b>.</P>
+<p>Aqui está a sintaxe básica:</p>
+<p>element {</p>
+<p>background: linear-gradient(direção, cor1, cor2, cor3, ...);</p>
+<p>}</p>
+<p><b>•	direção: </b>A direção da linha do gradiente. Pode ser um ângulo (em graus) ou uma direção específica, como to right, to top, to bottom left, etc.</p>
+<p><b>•	cor1, cor2, cor3, ...: </b>As cores que formarão o gradiente. Você pode especificar mais de duas cores para criar transições mais complexas.</p>
+<p>Exemplo simples de linear gradient:</p>
+<p>body {</p>
+<p>background: linear-gradient(to right, red, yellow);</p>
+<p>}</p>
+<p>Neste exemplo, o gradiente vai do vermelho (à esquerda) para o amarelo (à direita). O to right define que a direção do gradiente será da esquerda para a direita.</p>
+<p>Você pode usar várias cores em um único gradiente. Por exemplo, criando um gradiente com 3 ou mais cores:</p>
+<p>Body {</p>
+<p>background: linear-gradient(to right, red, yellow, green);</p>
+<p>}</p>
+<p>Neste caso, o gradiente vai do vermelho para o amarelo e depois para o verde.</p>
+<p>Você também pode especificar onde cada cor começa e termina no gradiente. Isso é feito adicionando um valor percentual ou em unidades de comprimento ao lado da cor.</p>
+<p>Body {</p>
+<p>background: linear-gradient(to right, red 10%, yellow 50%, green 90%);</p>
+<p>}</p>
+<p><b>•	red 10% </b>significa que a cor vermelha começará até 10% do caminho do gradiente.</p>
+<p><b>•	yellow 50% </b>significa que o amarelo aparecerá no meio (50% do caminho).</p>
+<p><b>•	green 90% </b>significa que o verde começará a 90% do caminho.</p>
+<p>Isso permite controlar com precisão a posição de cada cor ao longo do gradiente.</p>
+<br>
+<h3>Usando Gradientes em Textos</h3>
+<p>Sim, você também <b>pode aplicar gradientes a textos!</b> Para isso, é necessário usar a propriedade background-clip (que determina como o fundo é cortado) junto com a propriedade linear-gradient:</p>
+<p>h1 {</p>
+<p>background-color: linear-gradient(to left, red, yellow, green);</p>
+<p>}</p>
+<p>Aqui, o gradiente será aplicado ao texto do h1, criando um efeito de texto com cores graduais.</p>
+<br>
+<h3>Imagens no CSS</h3>
+<p>Agora vamos falar sobre como trabalhar com imagens no CSS. As imagens podem ser usadas como <b>fundo de elemento</b> ou também como <b>parte do conteúdo visual</b> do site.</p>
+<br>
+<h4>Usando Imagens como Fundo (background-image)</h4>
+<p>Uma das maneiras mais comuns de usar imagens no CSS é aplicá-las como fundo de elementos. A propriedade <b>background-image</b> define a imagem de fundo de um elemento. Veja o exemplo:</p>
+<p>Body {</p>
+<p>background-image: url(image.jpg);</p>
+<p>background-size: cover; </p>
+<p>background-position: center; </p>
+<p>}</p>
+<P><b>•	url(): </b>Dentro dos parênteses, você coloca o caminho para a imagem.</P>
+<p><b>•	background-size: cover;:</b> A imagem vai cobrir toda a área do elemento, mas mantendo sua proporção.</p>
+<p><b>•	background-position: </b>Define o posicionamento da imagem dentro do elemento. Pode ser left, center, right, top, bottom, ou valores em pixels ou porcentagem.</p>
+<p>Você pode <b>alterar a opacidade de imagens</b> e outros elementos usando a propriedade opacity. Um valor de 1 significa totalmente opaco e 0 significa totalmente transparente. Veja o exemplo:</p>
+<p>img {</p>
+<p>opacity: 0.5; ( A imagem terá 50% de transparência)</p>
+<p>}</p>
+<br>
+<h3>Transições Simples</h3>
+<h4>Transições (Transitions)</h4>
+<p>As transições no CSS são usadas para <b>criar efeitos suaves</b> quando uma propriedade de um elemento muda. Com isso, você consegue fazer algo como uma cor de fundo que muda gradualmente quando o usuário passa o mouse sobre o elemento. Em resumo, você "transita" de um estado para outro de forma animada.</p>
+<p>Como funciona:</p>
+<p><b>•	transition </b>é a propriedade principal que define a duração e o tipo de transição entre os estados.</p>
+<p>•	Você define a propriedade, o tempo (duração), e opcionalmente, o tipo de curva de aceleração <b>(como ease, linear, etc.).</b></p>
+<p>Sintaxe básica:</p>
+<p>elemento {</p>
+<p>transition: propriedade duração tipo-de-velocidade;</p>
+<p>}</p>
+<br>
+<p>Exemplo simples:</p>
+<p><b>(Estado inicial)</b></p>
+<p>button {</p>
+<p>background-color: blue;</p>
+<p>color: white;</p>
+<p>padding: 10px 20px;</p>
+<P>border: none;</P>
+<p>cursor: pointer;</p>
+<p>transition: background-color 0.3s ease;  </p>
+<p>}</p>
+<p><b>( Estado quando o mouse passa sobre o botão)</b></p>
+<p>button:hover {</p>
+<p>background-color: green; </p> 
+<p>}</p>
+<p>Neste exemplo, quando o usuário passar o mouse sobre o botão, a cor de fundo muda de azul para verde de forma suave em 0.3 segundos.</p>
+<hr>
+<p>Vamos aprender a fazer mais uma transição com os seguintes requisitos:</p>
+<p>•	Quando o usuário passa o mouse sobre o elemento (pode ser um texto ou uma imagem), ele se move para cima.</p>
+<p>•	A animação deve ser suave, ou seja, um movimento gradual, e não abrupto.</p>
+<p>Para isso, vamos usar a propriedade transform, que permite mover, girar, redimensionar, etc., e combinar com a propriedade transition para criar o efeito suave.</p>
+<p>Estrutura básica:</p>
+<p><b>•	transform: translateY(): </b>Essa propriedade vai mover o elemento no eixo Y (vertical). Um valor negativo faz o elemento subir (mover para cima), e um valor positivo faz o elemento descer.</p>
+<p><b>•	transition: </b>Vai permitir que a mudança de posição aconteça de forma suave.</p>
+<br>
+<p><b>Exemplo 1: </b>Texto subindo ao passar o mouse</p>
+<p>Aqui temos um exemplo onde o texto se move para cima quando o mouse passa por cima dele.</p>
+HTML
+<pre>
+    <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-br"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title>Transição de Texto&lt;/title&gt;
+&lt;style&gt;
+</code>
+</pre>
+
+<p>.texto {</p>
+<p>font-size: 2rem;</p>
+<p>font-weight: bold;</p>
+<p>color: #333;</p>
+<p>display: inline-block;</p>
+<p>transition: transform 0.3s ease;</p>
+<p>>}</p>
+
+<p>.texto:hover {</p>
+<p></p>transform: translateY(-10px);</p>
+<p>}</p>
+
+    <pre>
+    <code>
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p class="texto"&gt;Passe o mouse sobre mim!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </code>
+</pre>
+
+<p><b>O que acontece aqui:</b></p>
+<p>•	Quando o mouse não está sobre o texto, ele permanece na posição original.</p>
+<p>•	Quando o mouse passa sobre o texto, a propriedade <b>transform com translateY(-10px)</b> é aplicada, movendo o texto 10px para cima.</p>
+<p>•	O <b>transition: transform 0.3s ease</b> cria uma transição suave de 0.3 segundos, o que faz com que o movimento seja gradual, não instantâneo.</p>
+<p>•	O efeito é acionado quando o mouse entra e sai do elemento <b>(-hover-).</b></p>
+<hr>
+<P><B>Exemplo 2: </B>Imagem subindo ao passar o mouse</P>
+<p>Agora, vamos aplicar o mesmo efeito em uma imagem:</p>
+HTML
+<pre>
+<code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-br"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title>Transição de Imagem&lt;/title&gt;
+&lt;style&gt;
+</code>
+</pre>
+<p>.imagem {</p>
+<p>width: 300px;</p>
+      <p>height: 200px;</p>
+      <p>transition: transform 0.3s ease;</p>
+    <p>}</p>
+
+    <p>.imagem:hover {</p>
+      <p>transform: translateY(-15px);</p> 
+    <p>}</p>
+<pre>
+<code>
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;img src="img.jpg" width=”300px” alt="Imagem exemplo" class="imagem"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+<P><B>Explicação do exemplo da imagem:</B></P>
+<P>•	A imagem tem uma largura de 300px.</P>
+<p>•	Ao passar o mouse sobre a imagem, a propriedade <b>transform: translateY(-15px) </b>é ativada, fazendo a imagem subir 15px.</p>
+<p>•	A transição é suave porque utilizamos <b>transition: transform 0.3s ease</b>, ou seja, a movimentação de 15px vai acontecer em 0.3 segundos com aceleração e desaceleração suaves.</p>
+<p>•	Quando o mouse sai da imagem, a transição ocorre no caminho contrário, trazendo a imagem de volta para a posição original.</p>
+<br>
+<h3>Curvas de Aceleração</h3>
+<p>Tanto nas transições quanto nas animações, você pode definir a aceleração usando valores como:</p>
+<p><b>•	ease: </b>começa mais devagar, acelera e depois desacelera no final.</p>
+<p><b>•	linear: </b>mantém a velocidade constante.</p>
+<p><b>•	ease-in: </b>começa devagar e acelera no final.</p>
+<p><b>•	ease-out: </b>começa rápido e desacelera no final.</p>
+<p><b>•	ease-in-out: </b>começa e termina devagar, com aceleração no meio.</p>
+<hr>
+<p><b>Dê-nos a sua opinião sobre esta lição:</p></b>
+<form action="processar_feedback.php" method="post">
+    <p><label for="nome">Nome ou e-mail (Opcional):</label>
+    <input type="text" id="nome" name="nome" placeholder="Seu nome"></p>
+
+    <p><label for="dificuldade">Dificuldade da Lição:</label>
+<select id="dificuldade" name="dificuldade">
+<option value="muito_facil">Muito fácil</option>
+<option value="facil">Fácil</option>
+<option value="media">Média</option>
+<option value="dificil">Difícil</option>
+<option value="muito_dificil">Muito difícil</option>
+</select></p>
+
+<p><label for="melhoria">O que poderia ser melhorado?</label>
+<textarea id="melhoria" name="melhoria" rows="4" placeholder="Escreva aqui..."></textarea></p>
+
+<p><label for="comentarios">Sugestões e Comentários Adicionais:</label>
+<textarea id="comentarios" name="comentarios" rows="4" placeholder="Escreva aqui..."></textarea></p>
+
+<p><button type="submit">Enviar Feedback</button></p>
+</form>
+<a href="Módulo 3.html" class="circle">Voltar</a>
+</div>
+</body>
+
+        

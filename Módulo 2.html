@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+         <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Introducão ao CSS</title>
+                    <link rel="stylesheet" href="style.css">
+                    <style>
+                        pre{
+                            text-align: left; 
+                        margin-left: 0; 
+                        }
+                        code {
+                            font-family: "Courier New", Courier, monospace;
+                            color: white;
+                        }
+                    </style>
+                </head>
+                <body>  
+                    <div class="container">
+                    <h1>Introdução Ao CSS</h1>
+                    <h2>O que é CSS?</h2>
+                    <p>CSS (Cascading Style Sheets) é uma linguagem usada para definir o estilo de um site. Você pode pensar no CSS como a "roupa" que os elementos de um site vão vestir.</p>
+                    <P>Por exemplo, o HTML é como a estrutura do seu site — ele é como o esqueleto de uma pessoa. Ele diz o que existe na página, como títulos, parágrafos, imagens, listas, etc. Mas o CSS é o que dá beleza e personalidade a esse conteúdo. Ele é responsável por tudo o que tem a ver com cores, fontes, espaçamento e layout.</P>
+                    <p>Então, sempre que você acessar uma página na internet, o que você vê — as cores, as fontes, o espaçamento entre os elementos — são definidos pelo CSS. Exemplo Prático:</p>
+                    <p>Imagina que você tem um arquivo HTML que é algo assim:</p>
+                    <pre>
+                        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-br"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;title>Minha Página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1>Bem-vindo ao meu site!&lt;/h1&gt;
+&lt;p>Este é um parágrafo de exemplo.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code>
+                    </pre>
+                <p>Agora, você quer que o título (h1) seja <b>azul</b> e o parágrafo (p) tenha um tamanho de fonte maior. Para isso, você escreve o CSS assim:</p>
+                <p>h1 {</p>
+                    <p>color: blue; </p> 
+                <p>}</p>
+                
+                <p>p {</p>
+                    <p>font-size: 20px; </p> 
+                <p>}</p>
+                    <h3>Como o CSS "Cascata" Funciona?</h3>
+                    <p>Agora, o <b>"cascata"</b> (do termo Cascading de CSS) é um conceito importante que significa que, se você tiver várias regras de estilo aplicadas ao mesmo elemento, o navegador vai seguir uma ordem de prioridade para decidir qual estilo aplicar. Ou seja, ele vai escolher o estilo de acordo com o que tem mais especificidade ou, se for igual, a última regra que aparecer no código.
+                        Por exemplo, se você escrever isso:</p>
+                        <p>h1 {</p>
+                        <p>color: blue; </p> 
+                        <p>}</p>
+                        <P>h1 {</P>
+                        <p>color: red; </p>  
+                        <p>}</p>q
+                    <p>O título <b>h1</b> vai ficar vermelho porque a segunda regra foi a última a ser lida, então ela "sobrescreve" a primeira.</p><br>
+                    <h3>Estrutura Básica de uma Regra CSS</h3>
+                    <p>Uma regra CSS é composta por três partes principais:</p>
+                    <p><b>Seletor</b>: Define quais elementos HTML serão estilizados.</p>
+                    <p><b>Propriedades</b>: São as características ou atributos dos elementos que queremos alterar.</p>
+                    <p><b>Valores</b>: Especificam o que será aplicado à propriedade.</p>
+                    <p><b>A estrutura básica</b> é assim:</p>
+                    <p>seletor {</p>
+                        <p>propriedade: valor;</p>
+                    <p>}</p><br>
+                    <p><b>Por exemplo:</b></p>
+                       <p>h1 {</p>
+                            <p>color: blue;</p>
+                            <p>font-size: 24px;</p>
+                        <p>}</p><br>
+                    <p>Neste exemplo:</p>
+                       <p><b> h1</b> é o seletor que seleciona todos os elementos <b>h1</b> da página.</p>
+                        <p><b>color</b> e <b>font-size</b> são as propriedades.</p>
+                        <p><b>blue</b> e <b>24px</b> são os valores atribuídos a essas propriedades.</p><br>
+                        <h3>A História do CSS</h3>
+                        <p>Agora que já entendemos como o CSS funciona, é interessante saber um pouco sobre sua história:</p>
+                        <p><b>•	1996</b>: O CSS foi criado pelo <b>W3C (World Wide Web Consortium)</b>. Antes do CSS, tudo era feito no HTML e não havia uma forma simples de estilizar as páginas.</p>
+                        <p><b>•	1997-1998</b>: O <b>CSS2</b> trouxe mais recursos, como a possibilidade de posicionar elementos de maneira mais avançada e de usar fontes diferentes.</p>
+                        <p><b>•	2000-2010</b>: A evolução do CSS foi marcada pela criação de novas técnicas e propriedades, como o CSS3, que permitiu criar animações, gradientes, sombras e layouts mais modernos e flexíveis.</p>
+                        <p><b>•	2010 em diante</b>: A partir de 2010, o CSS foi amplamente utilizado para criar layouts responsivos (que se adaptam a diferentes tamanhos de tela, como celulares e desktops). Também surgiram ferramentas como <b>Sass e Less</b> que facilitaram a escrita do CSS, permitindo o uso de recursos como variáveis e funções.</p><hr>
+                        <p>Clique no primeiro link abaixo para acessar à lição 1 do módulo. :)</p>   
+                        <div class="circle-links">
+                            <a href="Lição 1.M2.html" class="circle">Lição 1</a>
+                            <a href="Lição 2.M2.html" class="circle">Lição 2</a>
+                            <a href="Lição 3.M2.html" class="circle">Lição 3</a>
+                            <a href="index.html" class="circle">Voltar</a>
+                            </div>
+                        </div>
+                    </body>

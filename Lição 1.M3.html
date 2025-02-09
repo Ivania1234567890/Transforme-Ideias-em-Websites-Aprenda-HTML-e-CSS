@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lição 1</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body><div class="container">
+    <h1>Modelagem de Caixa </h1>
+    <h2>O que é o Box Model?</h2>
+    <p>Pensa na caixa de um presente. Para que você tenha um presente embalado, você precisa do conteúdo dentro, depois envolve com uma embalagem (o papel), coloca uma fita (borda) e, por fim, coloca o presente dentro de uma caixa maior, com algum espaço extra para que ele não fique apertado. O box model no CSS é exatamente isso, mas com as caixas de elementos na web.</p>
+    <p>Cada elemento da página (como um parágrafo, uma imagem) é desenhado dentro de uma caixa. E dentro dessa caixa, existem diferentes partes, como o conteúdo, o preenchimento, a borda e a margem. Vamos conhecer cada uma dessas partes?</p>
+    <br>  
+    <h3>Partes do Box Model:</h3>
+    <p>Imagine que temos uma caixa retangular. Ela pode ser dividida em quatro áreas principais:</p>
+    <h4>a) Conteúdo (Content)</h4>
+    <p>O conteúdo é o que está dentro da caixa. Pode ser texto, imagens — qualquer coisa que você coloque dentro do elemento HTML.</p>
+    <p>Exemplo: O texto dentro de uma <-div->.</p>
+    <p><b>Tamanho:</b> O tamanho dessa área é determinado pelas propriedades <b>width e height</b>. Ou seja, a <b>largura e a altura</b> do elemento.</p>
+    <hr>
+    <h4>b) Preenchimento (Padding)</h4> 
+    <p>Ao redor do conteúdo, temos o <b>preenchimento</b> (padding), que cria um <b>espaço entre o conteúdo e a borda</b>. Imagine que você colocou o presente dentro da caixa e deixou uma distância entre o presente e a embalagem.</p>
+    <p><b>Propriedade: </b>A propriedade padding no CSS controla esse espaço. Você pode definir o valor de forma igual para todos os lados ou diferente para cada lado (topo, direita, fundo e esquerda).</p>
+    <p>Exemplo de CSS para definir o padding:</p>
+    <p>div {</p>
+    <p>padding: 20px;  (Deixa 20px de espaço ao redor do conteúdo)</p>
+    <p>}</p>
+    <hr>  
+    <h4>c) Borda (Border)</h4>
+    <p>A borda (border) é a <b>linha ao redor do conteúdo e do padding</b>, como se fosse a fita que você coloca ao redor da embalagem do presente. Ela pode ser de diferentes tipos: sólida, pontilhada, com cores variadas, e com espessuras diferentes.</p>
+    <p><b>Propriedade: </b>A borda é definida com as propriedades <b>border, border-width, border-style e border-color.</b></p>
+    <p></p>Exemplo de CSS para borda:
+    <p>div {</p>
+    <p>border: 2px solid black; (Borda de 2px de espessura, linha sólida e cor preta)</p>
+    <p>}</p>
+    <hr>
+    <h4>d) Margem (Margin)</h4>
+    <p>Por fim, temos a margem. A margem <b>cria o espaço entre a borda da caixa e outros elementos ao redor</b>. É o espaço externo da caixa. Imagine que você colocou várias caixas uma ao lado da outra, e a margem é o espaço que separa essas caixas.</p>
+    <p><b>Propriedade: </b>A propriedade margin controla esse espaço.</p>
+    <p>Exemplo de CSS para margem:</p>
+    <p>div {</p>
+    <p>margin: 10px;  (Cria um espaço de 10px ao redor da borda da caixa)</p>
+    <p>}</p>
+    <br>
+    <h3>Como tudo isso afeta o layout?</h3>
+    <p></p>Agora, imagine que você tem um elemento com tamanho fixo, como uma caixa de <b>300px de largura e 200px de altura</b>. Se você adicionar padding e borda, o tamanho final da caixa vai aumentar, porque o espaço ocupado por ela vai incluir também o padding e a borda.</p>
+    <h4>a) Box Model Padrão (content-box)</h4>
+    <p>No modelo padrão, o tamanho da caixa que você define com as propriedades width e height se aplica apenas ao conteúdo. O padding e a borda vão ser adicionados fora dessa área.</p>
+    <p>Por exemplo:</p>
+    <p>div {</p>
+    <p>width: 300px;</p>
+    <p>height: 200px;</p>
+    <p>padding: 20px;</p>
+    <p>border: 5px solid black;</p>
+    <p>}</p>
+<p>A caixa vai ter 300px de largura e 200px de altura no conteúdo.</p>
+<p>No entanto, o tamanho total da caixa vai ser maior do que isso, porque o <b>padding e a borda são adicionado</b>s fora dessa área:</p>
+<p><b>Largura total=</b> 300px (conteúdo) + 20px (padding à esquerda) + 20px (padding à direita) + 5px (borda à esquerda) + 5px (borda à direita)= 350px.</p>
+<p><b>Altura total=</b> 200px (conteúdo) + 20px (padding em cima) + 20px (padding embaixo) + 5px (borda em cima) + 5px (borda embaixo) = 250px.</p>
+<p>Ou seja, a largura e a altura definidas no CSS representam apenas o conteúdo. Para o layout total, você precisa considerar o padding e a borda também.</p>
+<hr>
+<h4>b) Box Model border-box</h4>
+<p>Agora, imagine que você quer definir o tamanho total da caixa, incluindo o padding e a borda, sem que isso aumente o tamanho da caixa.</p>
+<p>Nesse caso, usamos o modelo border-box. Quando você usa border-box, a largura e a altura definidas no CSS já incluem o conteúdo, o padding e a borda. Ou seja, a caixa vai ter exatamente o tamanho que você especificou.</p>
+<p>Você pode ativar o border-box assim:</p>
+<p>* {</p>
+<p>box-sizing: border-box;</p> 
+<p>}</p>
+<p>Isso faz com que todos os elementos da página usem o modelo border-box.</p>
+<br>
+<h3>O que é posicionamento de elementos?</h3>
+<p>O posicionamento em CSS é a maneira como você <b>controla a localização dos elementos dentro de uma página web</b>. Quando você posiciona um elemento, você determina onde ele vai estar em relação a outros elementos ou à tela. Existem várias estratégias de posicionamento em CSS, cada uma com seu comportamento específico. Eis abaixo os principais tipos, mas nós iremos abordar somente de dois.</p>
+<br>
+<h3>Tipos de Posicionamento em CSS</h3>
+<h4>•	position: static</h4>
+<h4>•	position: relative</h4>
+<h4>•	position: absolute</h4>
+<h4>•	position: fixed</h4>
+<p>Vamos entender cada um deles!</p>
+<hr>
+<h4>1. Position: static</h4>
+<p>O static é o <b>padrão para todos os elementos</b>, ou seja, se você não definir um posicionamento específico para um elemento, ele terá o valor static por padrão. Isso significa que o elemento será posicionado de acordo com o fluxo normal do documento.</p>
+<h4>Como funciona?</h4>
+<p>Um elemento com <b>position: static</b> é colocado no layout de acordo com o fluxo normal da página, ou seja, ele não será afetado por propriedades como <b>top, right, bottom ou left</b>.</p>
+<p>Exemplo:</p>
+<p>p {</p>
+<p>position: static;</p>
+<p>}</p>
+<p>Este comportamento é o mesmo que não ter a propriedade position definida.</p>
+<hr>
+<h4>2. Position: relative</h4>
+<p>Quando você define um elemento com <b>position: relative</b>, ele ainda vai seguir o fluxo normal do documento, mas você <b>pode deslocá-lo em relação à sua posição original</b> usando as propriedades <b>top, right, bottom ou left.</b></p>
+<h4>Como funciona?</h4>
+<p>O elemento é posicionado de forma relativa ao seu local original no fluxo do documento.</p>
+<p>As propriedades <b>top, right, bottom e left</b> deslocam o elemento a partir do seu ponto de origem sem afetar o layout dos outros elementos.</p>
+<p>Exemplo:</p>
+<p>p {</p>
+<p>position: relative;</p>
+<p>top: 20px; (Move o elemento 20px para baixo)</p>
+<p>left: 30px;  (Move o elemento 30px para a direita)</p> 
+<p>}</p>
+<p>Nesse exemplo, o <b>p</b> será deslocado 20px para baixo e 30px para a direita, mas o espaço onde ele estava originalmente no layout ainda será "reservado".</p>
+<hr>
+<p><b>Dê-nos a sua opinião sobre esta lição:</p></b>
+<form action="processar_feedback.php" method="post">
+    <p><label for="nome">Nome ou e-mail (Opcional):</label>
+    <input type="text" id="nome" name="nome" placeholder="Seu nome"></p>
+
+    <p><label for="dificuldade">Dificuldade da Lição:</label>
+<select id="dificuldade" name="dificuldade">
+<option value="muito_facil">Muito fácil</option>
+<option value="facil">Fácil</option>
+<option value="media">Média</option>
+<option value="dificil">Difícil</option>
+<option value="muito_dificil">Muito difícil</option>
+</select></p>
+
+<p><label for="melhoria">O que poderia ser melhorado?</label>
+<textarea id="melhoria" name="melhoria" rows="4" placeholder="Escreva aqui..."></textarea></p>
+
+<p><label for="comentarios">Sugestões e Comentários Adicionais:</label>
+<textarea id="comentarios" name="comentarios" rows="4" placeholder="Escreva aqui..."></textarea></p>
+
+<p><button type="submit">Enviar Feedback</button></p>
+</form>
+<a href="Módulo 3.html" class="circle">Voltar</a>
+</div>
+</body>
+        

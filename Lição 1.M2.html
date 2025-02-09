@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lição 1</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            pre{
+                text-align: left; 
+            margin-left: 0; 
+            }
+            code {
+                font-family: "Courier New", Courier, monospace;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+    <h1>Seletores e Propriedades</h1>
+    <p></p>Agora, vamos passar para os seletores e propriedades comuns no <b>CSS</b>, dividindo por categorias para facilitar o entendimento.
+    <h2>Seletores: </h2>  
+    <p><b>•	Seletores de Elemento (ou Tag):</b> Ele é responsável por selecionar todos os <b>elementos de um tipo específico.</b></p>
+    <p>Por exemplo: Seleciona todos os <-p-> na página.</p>
+    <p>p {</p>
+    <p>color: blue;</p>
+    <p>}</p>
+    
+    <p><b>•	Seletores de Classe: </b>O atributo class é usado para agrupamento de elementos. Um único class pode ser atribuído a múltiplos elementos na página, permitindo aplicar estilos e manipular esses elementos em conjunto.</p> 
+    <p>Exemplo de uso do class:</p>
+    HTML
+    <pre>
+        <code>
+&lt;p class="destaque"&gt;Este parágrafo tem a classe 'destaque'.&lt;/p&gt;
+&lt;p class="destaque"&gt;Este também tem a classe 'destaque'.&lt;/p&gt;
+&lt;p class="normal"&gt;Este não tem a classe 'destaque'.&lt;/p&gt;
+        </code>
+        </pre>
+        CSS
+        <P>.destaque {</P>
+        <P>color: red;</P>
+        <P>font-weight: bold;</P>
+            }
+    <style>
+.destaque {
+color: red;
+font-weight: bold;
+}
+   </style>
+    <p><b>Resultado no navegador:</b></p>
+<p class="destaque">Este parágrafo tem a classe 'destaque'.</p>
+<p class="destaque">Este também tem a classe 'destaque'.</p>
+<p class="normal">Este não tem a classe 'destaque'.</p>
+    <hr>
+    <p><b>•	Seletores de ID: </b>O atributo id serve para identificar de forma única um elemento dentro de uma página HTML. Ou seja, cada valor de id deve ser único em uma página.</p> 
+    <p>Exemplo de uso do id:</p>
+    HTML
+    <pre>
+    <code>
+&lt;p id="paragrafo1"&gt;Este é um parágrafo com um ID único.&lt;/p&gt;
+&lt;p id="paragrafo2"&gt;Este é outro parágrafo com outro ID.&lt;/p&gt;
+    </code>
+    </pre>
+    <p>CSS</p>
+    <p>#paragrafo1 {</p>
+    <p>color: blue;</p>
+    <p>font-weight: bold;</p>
+    <p>}</p>
+    <style>
+        #paragrafo1 {
+  color: blue;
+  font-weight: bold;
+}
+    </style>
+    <p><b>Resultado no navegador:</b></p>
+    <p id="paragrafo1">Este é um parágrafo com um ID único.</p>
+    <p id="paragrafo2">Este é outro parágrafo com outro ID.</p>
+    <hr>
+    <p><b>•	Seletores Universais: </b>Seleciona todos os elementos na página.</p> 
+    <p>Por exemplo: Aplica um estilo a todos os elementos da página.</p>
+    <p>{</p>
+    <p>font-family: Arial, sans-serif;</p>
+    <p>}</p>
+    <hr>
+    <p><b>•	Seletores de Atributo: </b>Seleciona elementos com um atributo específico.</p> 
+    <p>Por exemplo: Seleciona todos os links (<-a->) que têm o atributo <b>href</b>.</p>
+    <p>a[href] {</p>
+    <p>color: green;</p>
+    <p>}</p>
+    <hr>
+    <p><b>•	Seletores Descendentes: </b>Seleciona elementos dentro de outro elemento.</p> 
+    <p>Por exemplo: Seleciona todos os <-p-> dentro de um <-div->.</p>
+    <p>div p {</p>
+    <p>margin-bottom: 10px;</p>
+    <p>}</p>
+    <hr>
+    <p><b>•	Seletores de Filhos Diretos: </b> Seleciona elementos que são filhos diretos de outro elemento.</p> 
+    <p>Por exemplo: Seleciona todos os <-li-> que são filhos diretos de um <-ul->.</p>
+    <p>ul: li {</p>
+    <p>list-style-type: square;</p>
+    <p>}</p>
+    <hr>
+    <p><b>•	Seletores de Pseudo-classes: </b>Seleciona elementos em um estado específico.</p> 
+    <p>Por exemplo: hover aplica um estilo quando o usuário passa o mouse sobre o elemento.</p>
+    <p>a: hover {</p>
+    <p>color: red;</p>
+    <p>}</p>
+    <br>
+    <h2>Propriedades Comuns no CSS</h2>
+    <p>Aqui estão algumas das propriedades mais comuns no CSS para estilizar elementos na página.</p>
+    <h3>Propriedades de Texto e Fonte</h3>
+    <p><b>•	color: </b>Define a cor do texto.</p>
+        <p>p {</p>
+        <p>color: red;</p>
+    <p>}</p>
+    <hr>
+    <p><b>•	font-size: </b>Define o tamanho da fonte.</p>
+    <p>h1 {</p>
+    <p> font-size: 32px;</p>
+    -<p>}</p>
+    <hr>
+     <p><b>•	font-family:</b>Define a fonte utilizada.</p> 
+    <p>p {</p>
+       <p>   font-family: Arial, sans-serif;</p>  
+       <p>}</p> 
+       <hr>
+    <p><b>•	font-weight:</b>Define o peso da fonte (como negrito).</p> 
+    <p>p {</p>
+    <p>font-weight: bold;</p>
+    <p>}</p>
+    <hr>
+    <p><b>•	line-height:</b>Define a altura da linha, ou o espaçamento entre as linhas de texto.</p> 
+    <p>{</p>p 
+    <p>line-height: 1.6;</p>
+    <p>}</p>
+    <hr>
+    <p><b>•	text-align: </b>Define o alinhamento do texto.</p> 
+    <p>h1 {</p>
+    <p>text-align: center;</p>
+    <P>}</P>
+    <hr>
+    <p><b>•	text-decoration: </b>Adiciona efeitos ao texto, como sublinhado, riscado, etc.</p>
+    <p>a {</p>
+    <p>text-decoration: underline;</p>
+    <P>}</P>
+    <hr>
+    <p><b>•	letter-spacing: </b>Define o espaço entre as letras.</p>
+    <p>p {</p>
+    <p>letter-spacing: 2px;</p>
+    <P>}</P>
+    <hr>
+    <p><b>•	word-spacing: </b>Ajusta o espaço entre as palavras em um texto.</p>
+    <p>p {</p>
+    <p> word-spacing: 4px;</p>
+    <p>}</p>
+    <br>
+    <p>Esses são alguns dos seletores e propriedades mais usados no CSS.</p>
+    <hr>
+    <p><b>Dê-nos a sua opinião sobre esta lição:</p></b>
+    <form action="processar_feedback.php" method="post">
+        <p><label for="nome">Nome ou e-mail (Opcional):</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome"></p>
+
+        <p><label for="dificuldade">Dificuldade da Lição:</label>
+<select id="dificuldade" name="dificuldade">
+<option value="muito_facil">Muito fácil</option>
+<option value="facil">Fácil</option>
+<option value="media">Média</option>
+<option value="dificil">Difícil</option>
+<option value="muito_dificil">Muito difícil</option>
+</select></p>
+
+<p><label for="melhoria">O que poderia ser melhorado?</label>
+<textarea id="melhoria" name="melhoria" rows="4" placeholder="Escreva aqui..."></textarea></p>
+
+<p><label for="comentarios">Sugestões e Comentários Adicionais:</label>
+<textarea id="comentarios" name="comentarios" rows="4" placeholder="Escreva aqui..."></textarea></p>
+
+<p><button type="submit">Enviar Feedback</button></p>
+</form>
+    <a href="Módulo 2.html" class="circle">Voltar</a>
+  </div>
+    </body>
+
+
+
+        

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lição 1</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            pre{
+                text-align: left; 
+            margin-left: 0; 
+            }
+            code {
+                font-family: "Courier New", Courier, monospace;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <h1>Estrutura, Tags e Elementos</h1>
+        <h2>Estrutura básica do HTML</h2>
+        <p>A estrutura básica de um documento HTML é bem simples, mas é fundamental entender como ela funciona, pois é a partir dessa estrutura que toda a página web é construída. Ela possui a seguinte estrutura:</p>
+        <pre>
+            <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-br"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title>Meu Site&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>                
+</pre>                
+        <h3>Explicação de cada Parte:</h3>
+        <h4>	<b>!DOCTYPE html:</b> </h4>
+        <p>É a declaração que informa ao navegador que este documento é uma página HTML5. Sem essa linha, o navegador pode não renderizar corretamente a página. É a primeira coisa a aparecer em qualquer documento HTML.</p>
+        <h4><b>	html lang="pt-br": </b></h4>
+        <p>A tag <html> envolve todo o conteúdo da página; o atributo lang="pt-br" indica que o idioma da página é português (Brasil). Isso ajuda os navegadores e ferramentas de acessibilidade a processar o conteúdo corretamente.</p>
+        <h4><b>	head: </b></h4>
+        <p>O <b>head</b> contém informações meta sobre o site (não visíveis diretamente para o usuário), como o título, codificação de caracteres e links para estilos (CSS), etc. Dentro do <b>head</b>, temos:</p>
+        <p><B>meta charset="UTF-8":</B>Define a codificação de caracteres, garantindo que o conteúdo seja exibido corretamente, incluindo caracteres especiais, como acentos.</p>
+        <P><B>meta name="viewport" content="width=device-width, initial-scale=1.0":</B> Isso ajuda a tornar a página responsiva (adaptável a diferentes tamanhos de tela, como celulares e tablets).</P>
+        <br> 
+        <p><b>	title: </b></p>
+        <p>dentro do <b>head</b> também temos o <b>title</b> que é o  título da página, que aparece na aba do navegador. No exemplo, "Meu Site".</p>
+        <p><b>	body: </b></p>
+        <p>O body contém o <b>conteúdo visível</b> da página — o que o usuário realmente vê ao acessar o site. </p>
+        <hr>
+        <h3>O que é uma Tag?</h3>
+        <p>A tag é o marcador usado para identificar um elemento em HTML. Ela indica o início ou o final de um conteúdo ou estrutura dentro do código HTML.
+            As <b>tags de Abertura</b> indicam o início de um elemento.
+            As <b>tags de Fechamento</b> indicam o final de um elemento.
+            As tags são envolvidas por sinais de menor (<) e maior (>).
+            </p>
+            <h3>•	Exemplos de Tags:</h3>
+            <p><b><-h1->:</b> Tag de abertura do título principal.</p>
+            <p><b><-/h1->:</b> Tag de fechamento do título principal.</p>
+            <p><b><-p->:</b> Tag de abertura para um parágrafo.</p>
+            <p><b><-/p->:</b> Tag de fechamento para um parágrafo.</p>
+            <p>>As tags de fechamento geralmente são a mesma tag de abertura, mas com uma barra (/) antes do nome da tag. </p>
+            <hr>
+            <h3>O que é um Elemento?</h3>
+            <p>Um elemento é a completa estrutura de código que é formada pela tag de abertura, seu conteúdo e a tag de fechamento. Ou seja, o elemento é tudo o que está dentro da tag de abertura e da tag de fechamento.
+            <b>Por exemplo</b>, um elemento HTML inclui:</p>
+            <p><b>A tag de abertura:</b> que define onde o conteúdo começa.</p>
+            <p><b>O conteúdo:</b> que é o que está sendo descrito ou exibido.</p>
+            <p><b>A tag de fechamento:</b> que indica onde o conteúdo termina.</p>
+            <pre>
+                <code>
+&lt;HTML&gt;
+&lt;p>Isto é um parágrafo&lt;/p&gt;
+&lt;/HTML&gt;
+                </code>
+            </pre>
+            <P>Juntos, a tag de abertura (<-p->), o conteúdo <B>(Isto é um parágrafo)</B> e a tag de fechamento (<-/p->) formam o elemento <-p->.</P>
+            <h3>•	Diferença entre Tags e Elementos:</h3>
+            <p><b>Tag:</b> Refere-se apenas à parte de marcação, como <-p->, <-h1->, <-img->, etc. As tags são as "etiquetas" que você escreve no código.</p>
+            <p><b>Elemento:</b> Refere-se ao conjunto completo, ou seja, a tag de abertura, o conteúdo e a tag de fechamento. Então, um elemento HTML inclui tudo que compõe a estrutura de uma marcação HTML.</p>
+            <p><b>N.B.:</b> Algumas tags não precisam de uma tag de fechamento, ou seja, são auto-fechantes. Elas são usadas para inserir conteúdo que não tem "fim" ou "fechamento". Exemplos comuns são as tags de imagem ou linha horizontal.</p>
+            <p>Aqui estão algumas das tags HTML mais usadas e uma explicação simples de como cada uma funciona. Essas tags são fundamentais para estruturar o conteúdo em uma página web.</p>
+            <p><b>1.	<-h1->, <-h2->,... <-h6-></b></p>
+            <p>Essas são as tags de título. O <-h1-> representa o <b>título principal da página.</b> Em uma página, o <-h1-> geralmente deve ser o título mais importante, e as tags <-h2-> até <-h6-> são usadas para criar subtítulos.</p>
+            <p><b>2.	<-p-></b></p>
+            <p>O <-p-> define um <b>parágrafo</b> de texto. Ele organiza o texto na página.</p>
+            <p><b>3.	<-a-></b></p>
+            <P>O <-a-> cria um <b>link.</b> O atributo <b>href</b> indica para onde o link vai.</P>
+            <p>Por exemplo, <-a href=https://www.google.com target=”_blank”>Clique aqui para ir ao Google<-/a->.</p>
+            <p>No exemplo, o link leva para o Google. Quando você clica no texto "Clique aqui para ir ao Google", ele te leva a esse endereço. O atributo blank abre a hiperligação numa nova janela ou separador.</p>
+            <p>Para além destas, existem mais 3 propriedades diferentes:</p>
+            <p><b>	Self:</b> A página de destino abrirá na mesma janela ou guia.</p>
+            <p><b>	Parent:</b> Abre a hiperligação numa frame com ligação à actual.</p>
+            <p><b>	Top:</b> A página será aberta na janela inteira (sem frames), substituindo qualquer estrutura de frames.</p>
+            <p>Também tem a <b>hiperligação local</b>, que é um link que aponta para um arquivo ou recurso que está dentro do mesmo diretório ou pasta do seu projeto. Por exemplo: <-a href="sobre.html">Ir para a página Sobre<-/a-></p>
+            <p>Imagine que você tem duas paginas no seu directório. Uma chamada <b>índex.html</b> e outra <b>sobre.hmtl</b>. A página <b>sobre.html</b> está no mesmo diretório que <b>index.html</b>, então usamos apenas o nome do arquivo sobre.html como o caminho. Quando o usuário clicar no link, o navegador irá carregar a página <b>sobre.html</b> (que está na mesma pasta).</p>
+            <p><b>4.	<-img-></b></p>
+            <p>A tag <-img->  é usada para <b>inserir imagens</b> em uma página. A tag <-img-> requer um atributo <b>src</b> que indica o caminho da imagem, um atributo <b>alt</b> que fornece uma descrição alternativa da imagem (importante para acessibilidade) e também o atributo <b>width</b> que especifica, em pixels, o tamanho da imagem ao ser exibida na página.</p>
+            <p>Por exemplo, <-img src="imagem.jpg" width=”100px “ alt="Descrição da imagem"->.</p>
+            <p>Além de usar texto para criar links, você pode usar <b>imagens dentro de links.</b> Para isso, você coloca a tag <-img-> dentro de uma tag <-a->, transformando a imagem em um link clicável.</p>
+            <p><b>Exemplo de uma imagem como link:</b></p>
+            <p><-a href="https://www.exemplo.com"><-img src= "imagem.jpg" width="100px" alt="Descrição da imagem"><-/a-></p>
+            <p><b>5.	<-br-> </b></p>
+            <p>A tag <-br-> insere uma quebra de linha.</p>
+            <p>Por exemplo, <-p->Este é um parágrafo de texto.<-br->Agora começa uma nova linha.<-/p-></p>
+            <p>Quando você usa <-br->, o conteúdo que vem depois dele é exibido na linha seguinte. É muito útil para quando você não quer usar um novo parágrafo, mas deseja apenas separar o conteúdo.</p>  
+            <p><b>6.	<-hr-> </b></p>
+            <p>A tag <-hr-> é usada para inserir uma <b>linha horizontal</b> na página. Essa linha é frequentemente usada para separar seções de conteúdo ou criar uma divisão visual entre diferentes partes da página.  A tag <-hr-> é uma tag auto-fechante, isso significa que ela não precisa de uma tag de fechamento. Basta escrever <-hr->, e a linha horizontal será inserida.</p>
+            <p><b>7.	<-b-></b></p>
+            <p>A tag <-b-> é usada para <b>negrito.</b> Ela serve para dar ênfase visual ao texto, deixando-o mais escuro e destaque no conteúdo. Veja o exemplo:</p>
+            <p><-p->Este é um texto normal, mas <-b->este está em negrito<-/b->.<-/p-></p>
+            <p><b>Resultado:</b> Este é um texto normal, mas <b>este está em negrito</b>.</p>
+            <p><b>8.	 <-i-> </b></p> <p>A tag <-i-> é usada para <b>itálico.</b> Ela altera o estilo do texto para incliná-lo (em comparação ao texto normal). Veja o exemplo: </p>
+            <p><-p->Este é um texto normal, mas <-i->este está em itálico<-/i->.<-/p-></p>
+            <p>Resultado: Este é um texto normal, mas <i>este está em itálico.</i></p>
+            <p><b>9.	<-small-></b></p>  
+            <p>A tag <-small-> é usada para <b>reduzir o tamanho do texto.</b> O objetivo dela é diminuir a tamanho da fonte do texto em relação ao texto ao seu redor. O comportamento visual da tag é, portanto, o de fazer o texto aparecer menor, mas não muda o significado do conteúdo de maneira semântica. Veja o exemplo:</p>
+            <p><-p->Este é um texto normal, e <-small->este está em um tamanho menor<-/small->.<-/p-></p>
+            <p>Resultado: Este é um texto normal, e <small>este está em um tamanho menor.</small></p>
+            <p><b>10.	<-mark-></b></p>
+            <p>A tag <-mark-> é usada para <b>destacar ou marcar um texto</b>, geralmente com cor de fundo amarela (como se fosse um marcador de texto). Isso é útil quando você quer chamar atenção para algo em um conteúdo, como uma palavra-chave, um termo de pesquisa ou uma parte importante do texto. Veja o exemplo:</p> 
+            <p><-p->O <-mark->HTML<-/mark-> é uma linguagem de marcação usada para estruturar páginas web.<-/p-></p>
+            <p><b>Resultado:</b> <mark>HTML</mark> é uma linguagem de marcação usada para estruturar páginas web.</p>
+            <p><b>11.	 <-sub-> </b></p>
+            <p>A tag <-sub-> é usada para <b>subscrição</b>, ou seja, para colocar o texto um pouco abaixo da linha de base do texto normal. Isso é comum em fórmulas químicas (por exemplo, H₂O) ou em notações matemáticas. Veja o exemplo:</p>
+            <p><-p->A fórmula da água é H<-sub->2<-/sub->O.<-/p-></p>
+            <p><b>Resultado:</b> A fórmula da água é H<sub>2</sub>O.</p>
+            <p><b>12.	<-sup-> </b></p> 
+            <p>A tag <-sup-> é usada para <b>superscrição</b>, ou seja, para posicionar o texto um pouco acima da linha de base do texto normal. Isso é muito comum em potências matemáticas (como 2²) ou em notações de pé de página. Veja o exemplo:</p> 
+            <p><-p->A fórmula para o quadrado de um número é x<-sup->2<-/sup->.<-/p-></p>
+            <p><b>Resultado:</b> A fórmula para o quadrado de um número é x<sup>2</sup>.</p>
+            <p>Então, estas são algumas <b>tags amplamente usadas</b> em construção de páginas web.</p>
+            <hr>
+            <p><b>Dê-nos a sua opinião sobre esta lição:</p></b>
+            <form action="processar_feedback.php" method="post">
+                <p><label for="nome">Nome ou e-mail (Opcional):</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome"></p>
+
+                <p><label for="dificuldade">Dificuldade da Lição:</label>
+        <select id="dificuldade" name="dificuldade">
+        <option value="muito_facil">Muito fácil</option>
+        <option value="facil">Fácil</option>
+        <option value="media">Média</option>
+        <option value="dificil">Difícil</option>
+        <option value="muito_dificil">Muito difícil</option>
+    </select></p>
+
+    <p><label for="melhoria">O que poderia ser melhorado?</label>
+    <textarea id="melhoria" name="melhoria" rows="4" placeholder="Escreva aqui..."></textarea></p>
+
+    <p><label for="comentarios">Sugestões e Comentários Adicionais:</label>
+    <textarea id="comentarios" name="comentarios" rows="4" placeholder="Escreva aqui..."></textarea></p>
+
+    <p><button type="submit">Enviar Feedback</button></p>
+</form>
+            <a href="Módulo 1.html" class="circle">Voltar</a>
+        </div>
+            </body>
+            
+                
+                
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lição 3</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+    <h1>Exercicios práticos</h1>
+    <p>Antes de realizarmos os exercícios práticos, vamos mostrar primeiro o passo-a-passo para criar um documento HTML no seu dispositivo <b>(usando o aplicativo Visual Studio Code).</b></p> 
+    <P><B>•	Passo 1: </B>Baixe e instale o VS Code no seu dispositivo através do site oficial do Visual Studio Code;</P> 
+    <P><B>•	Passo 2: </B>No seu computador, crie uma pasta para o seu projecto. Pode ser chamada por exemplo, Meu primeiro site;</P> 
+    <P><B>•	Passo 3: </B> Abra o VS Code. No menu superior, clique em File > Open Folder... (ou Arquivo > Abrir Pasta...). Navegue até a pasta que você criou (Meu primeiro site) e clique em Abrir.</P>
+    <P><B>•	Passo 4: </B>Dentro da pasta do projeto, clique com o botão direito e escolha New File (ou Novo Arquivo). Nomeie o arquivo como index.html. O arquivo HTML padrão geralmente é chamado de index.html, pois é o primeiro carregado em um site.</P> 
+    <P>Agora que já sabemos como usar o <b>Visual Code</b>, vamos dar inicio aos exercícios.</P>
+    <br> 
+    <h2>Exercício 1: Criando uma Página Simples</h2>
+<p>Objetivo: <b>Criar uma página HTML simples com título, parágrafo, lista e imagem.</b></p>
+<p><b>Instruções:</b></p>
+<p>	Crie um arquivo HTML com a estrutura básica.</p>
+<p>	No corpo da página, adicione:</p>
+<p>•	Um título principal (<-h1->) com o texto "Minha Página Pessoal".</p>
+<p>•	Um parágrafo (<-p->) explicando algo sobre você.</p>
+<p>•	Uma lista não ordenada (<-ul->) com 3 hobbies (use a tag <-li-> para cada item).</p>
+<p>•	Qualquer imagem (<-img->)  que você queira (não se esqueça de usar o atributo src, width e alt).</p>
+<hr>
+<h2>Exercício 2: Criando um Formulário de Contato</h2>
+<P>Objetivo:<B> Criar um formulário simples para coletar informações do usuário.</B></P>
+<P>	Crie um formulário com os seguintes campos:</P>
+<P>•	Nome (campo de texto)</P>
+<P>•	E-mail (campo de e-mail)</P>
+<P>•	Mensagem (campo de texto)</P>
+<P>•	Adicione um botão para enviar o formulário.</P>
+<P>•	Defina um action fictício, como "enviar.php", para onde os dados seriam enviados (não é necessário que o formulário realmente funcione, apenas a estrutura).</P>
+<hr>
+<p><b>Dê-nos a sua opinião sobre esta lição:</p></b>
+<form action="processar_feedback.php" method="post">
+    <p><label for="nome">Nome ou e-mail (Opcional):</label>
+    <input type="text" id="nome" name="nome" placeholder="Seu nome"></p>
+
+    <p><label for="dificuldade">Dificuldade da Lição:</label>
+<select id="dificuldade" name="dificuldade">
+<option value="muito_facil">Muito fácil</option>
+<option value="facil">Fácil</option>
+<option value="media">Média</option>
+<option value="dificil">Difícil</option>
+<option value="muito_dificil">Muito difícil</option>
+</select></p>
+
+<p><label for="melhoria">O que poderia ser melhorado?</label>
+<textarea id="melhoria" name="melhoria" rows="4" placeholder="Escreva aqui..."></textarea></p>
+
+<p><label for="comentarios">Sugestões e Comentários Adicionais:</label>
+<textarea id="comentarios" name="comentarios" rows="4" placeholder="Escreva aqui..."></textarea></p>
+
+<p><button type="submit">Enviar Feedback</button></p>
+</form> 
+<a href="Módulo 1.html" class="circle">Voltar</a>
+</div>
+</body>
